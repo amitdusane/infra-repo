@@ -17,23 +17,10 @@ spec:
                 name: user-service
                 port:
                   number: 8081
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: microservices-ingress
-  namespace: default
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-spec:
-  rules:
-    - http:
-        paths:
-          - path: /user
+          - path: /oder
             pathType: Prefix
             backend:
               service:
-                name: user-service
+                name: order-service
                 port:
-                  number: 8081
+                  number: 8082
