@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gateway-service
-          image: amitdusane/gateway-service:1.0.6
+          image: amitdusane/gateway-service:1.0.7
           ports:
             - containerPort: 8083
           imagePullPolicy: Always
